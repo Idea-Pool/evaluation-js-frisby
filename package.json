@@ -4,7 +4,7 @@
   "description": "This is a template repository to create test-ware for evaluating certain (JS) test automation tools.",
   "main": "-",
   "scripts": {
-    "test": "echo \"No tests defined\" && exit 1",
+    "test": "jest",
     "lint": "eslint tests --fix"
   },
   "repository": {
@@ -26,9 +26,14 @@
   "homepage": "https://github.com/idea-pool/evaluation-js-template#readme",
   "dependencies": {
     "eslint": "^7.0.0",
-    "husky": "^4.2.5"
+    "husky": "^4.2.5",
+    "jest-json-schema": "^6.1.0"
   },
   "husky": {
     "precommit": "npm run lint"
+  },
+  "devDependencies": {
+    "frisby": "^2.1.3",
+    "jest": "^27.5.1"
   }
 }
