@@ -1,7 +1,7 @@
 const frisby = require("frisby");
 const Joi = require("joi");
 const prepareUrl = (url, session_id = "") => {
-    return `${url}?api_key=e231ae412af0eaab685d11c26505bda6&guest_session_id=${session_id}`;
+    return `${url}?api_key=${process.env.THEMOVIEDB_API_KEY}&guest_session_id=${session_id}`;
 };
 
 describe("Movie test", () => {
@@ -15,7 +15,7 @@ describe("Movie test", () => {
                 },
                 baseUrl: "https://api.themoviedb.org/3"
             },
-    
+
         });
         const response = await frisby.get(prepareUrl("/authentication/guest_session/new"));
         session_id = response.json.guest_session_id;
