@@ -12,10 +12,10 @@ In order to execute the implemented test cases, an account is needed on the http
 
 ## Framework used
 
-| Framework | URL                                               | Description                                                                             |
-|-----------|---------------------------------------------------|-----------------------------------------------------------------------------------------|
-| FrisbyJs  | https://doc.frisbyjs.com                          | The Easiest REST API Testing Framework, that makes REST API testing easy, fast, and fun.|
-| Jest      | https://jestjs.io                                 | A delightful JavaScript Testing Framework with a focus on simplicity.                   |
+| Framework | URL                       | Description                                                                             |
+|-----------|---------------------------|-----------------------------------------------------------------------------------------|
+| FrisbyJs  | https://docs.frisbyjs.com | The Easiest REST API Testing Framework, that makes REST API testing easy, fast, and fun.|
+| Jest      | https://jestjs.io         | A delightful JavaScript Testing Framework with a focus on simplicity.                   |
 
 
 ## Test cases
