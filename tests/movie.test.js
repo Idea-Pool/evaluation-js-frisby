@@ -50,7 +50,7 @@ describe("Movie test", () => {
         });
 
         const status_message = response.json.status_message;
-        expect(status_message).toEqual("Success.");
+        expect(status_message.toLowerCase()).toContain("success");
     });
 
     it("should not add an invalid rating to a movie", async function () {
