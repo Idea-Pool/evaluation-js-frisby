@@ -4,6 +4,10 @@ const prepareUrl = (url, session_id = "") => {
     return `${url}?api_key=${process.env.THEMOVIEDB_API_KEY}&guest_session_id=${session_id}`;
 };
 
+if (!process.env.THEMOVIEDB_API_KEY) {
+    throw new Error("THEMOVIEDB_API_KEY environment variable has not set.");
+}
+
 describe("Movie test", () => {
     let session_id;
     beforeAll(async() => {
