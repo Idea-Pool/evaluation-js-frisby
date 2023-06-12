@@ -1,10 +1,3 @@
-> Write test cases which test the following actions/checks:
-> - [x] check GET
-> - [x] check POST
-> - [x] check DELETE
-> - [x] check authentication
-> - [x] check query parameters: mandatory, optional
-> - [x] check schema
 
 # Test cases
 
@@ -28,7 +21,7 @@
 1. **When** the "POST movie rating" request is sent
 1. **Then** the response should contain status code 201
 
-## `TC-4` The movie rating should return proper error message
+## `TC-4` The movie rating should return proper status message
 1. **Give** the {movie_id} is added to the POST request
 1. **And** the {"value": 8.0} is added to the POST request's body
 1. **When** the "POST movie rating" request is sent

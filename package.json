@@ -1,15 +1,15 @@
 {
-  "name": "evaluation-js-template",
+  "name": "evaluation-js-frisby",
   "version": "0.0.1",
-  "description": "This is a template repository to create test-ware for evaluating certain (JS) test automation tools.",
+  "description": "This is a repository to create test-ware for evaluating Frisby JS test automation tool.",
   "main": "-",
   "scripts": {
-    "test": "echo \"No tests defined\" && exit 1",
+    "test": "jest",
     "lint": "eslint tests --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/szikszail/evaluation-template.git"
+    "url": "git+https://github.com/idea-pool/evaluation-js-frisby.git"
   },
   "keywords": [
     "Test",
@@ -21,12 +21,14 @@
   "author": "Idea Pool <SpecialEPM-DEBIdeaPoolStaff@epam.com>",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/idea-pool/evaluation-js-template/issues"
+    "url": "https://github.com/idea-pool/evaluation-js-frisby/issues"
   },
-  "homepage": "https://github.com/idea-pool/evaluation-js-template#readme",
+  "homepage": "https://github.com/idea-pool/evaluation-js-frisby#readme",
   "dependencies": {
     "eslint": "^7.0.0",
-    "husky": "^4.3.8"
+    "husky": "^4.3.8",
+    "frisby": "^2.1.3",
+    "jest": "^27.5.1"
   },
   "husky": {
     "precommit": "npm run lint"
