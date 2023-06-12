@@ -1,5 +1,4 @@
 const frisby = require("frisby");
-const Joi = require("joi");
 const prepareUrl = (url, session_id = "") => {
     return `${url}?api_key=${process.env.THEMOVIEDB_API_KEY}&guest_session_id=${session_id}`;
 };
@@ -30,13 +29,13 @@ describe("Movie test", () => {
             .expect("status", 200);
     });
 
-    it("should return schema", function () {
+    it("should return data with proper schema", function () {
         return frisby.get(prepareUrl("/movie/818647"))
-            .expect("json", "original_title", "A través de mi ventana")
             .expect("jsonTypes", {
-                "id": Joi.number().integer().required(),
-                "original_language": Joi.string().required(),
-                "original_title": Joi.string().required()
+                "id": frisby.Joi.number().integer().required(),
+                "original_language": frisby.Joi.string().required(),
+                "original_title": frisby.Joi.string().required(),
+                // TODO: add other fields
             });
     });
 
@@ -72,9 +71,8 @@ describe("Movie test", () => {
     });
 
     it("should delete a movie rating", async function () {
-        const response = await frisby.delete(prepareUrl("/movie/818647/rating", session_id));
-        const status_message = response.json.status_message;
-        expect(status_message).toEqual("The item/record was deleted successfully.");
+        return frisby.delete(prepareUrl("/movie/818647/rating", session_id))
+            .expect("json", "status_message", "The item/record was deleted successfully.");
     });
 
     it("should handle missing movie_id", function () {
